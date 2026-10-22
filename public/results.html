@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction Results | Auction House</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/results.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/">Auction House</a>
+    <nav>
+      <a href="/auctions.html">Auctions</a>
+      <a href="/mybids.html">My Bids</a>
+      <a href="/login.html">Login</a>
+      <button id="logoutButton" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Closed Auction Results</h1>
+    <p class="muted">See the final prices and winning bidders.</p>
+    <p id="message" role="status"></p>
+    <section id="results" class="grid" aria-live="polite"></section>
+  </main>
+</body>
+</html>

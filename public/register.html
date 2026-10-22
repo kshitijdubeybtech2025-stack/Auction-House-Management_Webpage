@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Auction House</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/register.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/">Auction House</a>
+    <nav>
+      <a href="/auctions.html">Auctions</a>
+      <a href="/login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Create an Account</h1>
+    <form id="registerForm">
+      <label for="username">Username
+        <input id="username" name="username" required minlength="3" maxlength="20"
+               pattern="[A-Za-z0-9_]+" autocomplete="username">
+      </label>
+      <label for="password">Password
+        <input id="password" name="password" type="password" required minlength="6"
+               maxlength="30" autocomplete="new-password">
+      </label>
+      <label for="confirmPassword">Confirm Password
+        <input id="confirmPassword" name="confirmPassword" type="password" required
+               minlength="6" maxlength="30" autocomplete="new-password">
+      </label>
+      <label for="role">Account Type
+        <select id="role" name="role" required>
+          <option value="BUYER">Buyer — place bids</option>
+          <option value="SELLER">Seller — create auctions</option>
+        </select>
+      </label>
+      <button type="submit">Register</button>
+    </form>
+    <p id="message" role="status"></p>
+    <p>Already registered? <a href="/login.html">Login here</a>.</p>
+  </main>
+</body>
+</html>

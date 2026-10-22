@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Auction | Auction House</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/create.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/">Auction House</a>
+    <nav>
+      <a href="/auctions.html">Auctions</a>
+      <a href="/mybids.html">My Bids</a>
+      <a href="/results.html">Results</a>
+      <a href="/login.html">Login</a>
+      <button id="logoutButton" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Create an Auction</h1>
+    <p class="muted">List an item for buyers to bid on.</p>
+
+    <form id="createAuctionForm" enctype="multipart/form-data">
+      <label for="title">Item title
+        <input id="title" name="title" required maxlength="100">
+      </label>
+
+      <label for="description">Description
+        <textarea id="description" name="description" rows="5" required maxlength="2000"></textarea>
+      </label>
+
+      <label for="minPrice">Minimum price
+        <input id="minPrice" name="minPrice" type="number" min="0.01" step="0.01" required>
+      </label>
+
+      <label for="timeLimitSec">Auction time limit
+        <select id="timeLimitSec" name="timeLimitSec" required>
+          <option value="10">10 seconds (testing)</option>
+          <option value="30">30 seconds</option>
+          <option value="60" selected>1 minute</option>
+          <option value="300">5 minutes</option>
+          <option value="600">10 minutes</option>
+          <option value="1800">30 minutes</option>
+          <option value="3600">1 hour</option>
+        </select>
+      </label>
+
+      <label for="image">Item image (optional)
+        <input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+      </label>
+
+      <button type="submit">Create Auction</button>
+    </form>
+
+    <p id="message" role="status"></p>
+  </main>
+</body>
+</html>

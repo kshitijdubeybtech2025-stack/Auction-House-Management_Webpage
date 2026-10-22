@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Auction House</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/login.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/">Auction House</a>
+    <nav>
+      <a href="/auctions.html">Auctions</a>
+      <a href="/register.html">Register</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Login</h1>
+    <p class="muted">Log in to access your auction account.</p>
+    <form id="loginForm">
+      <label for="username">Username
+        <input id="username" name="username" required minlength="3" maxlength="20"
+               pattern="[A-Za-z0-9_]+" autocomplete="username">
+      </label>
+      <label for="password">Password
+        <input id="password" name="password" type="password" required maxlength="30"
+               autocomplete="current-password">
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <p id="message" role="status"></p>
+    <p>Don't have an account? <a href="/register.html">Register here</a>.</p>
+  </main>
+</body>
+</html>

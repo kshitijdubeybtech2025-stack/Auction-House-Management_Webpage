@@ -1,0 +1,6 @@
+
+"scripts": {
+  "start": "node server.js",
+  "dev": "node --watch server.js",
+  "check": "node --check server.js && node --check src/db.js && node --check src/auth.js && node --check src/utils.js && node --check src/logger.js && node --check src/mailer.js && node --check src/monitor.js && node --check src/routes/users.js && node --check src/routes/auctions.js && node --check src/routes/bids.js"
+}
